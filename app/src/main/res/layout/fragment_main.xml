@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFF4"
+    tools:context=".ui.MainFragment">
+    <TextView
+        android:id="@+id/TextViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:fontFamily="@font/ef_jejudoldam"
+        android:gravity="center"
+        android:text="buggu\nbuggu"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:lineHeight="24sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewUsers"
+        android:layout_width="0dp"
+        android:layout_height="473dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewTitle" />
+
+    <ImageView
+        android:id="@+id/buttonPrev"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toTopOf="@id/seekBar4"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewUsers"
+        app:srcCompat="@drawable/baseline_navigate_before_24" />
+
+    <ImageView
+        android:id="@+id/buttonNext"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonPrev"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewUsers"
+        app:srcCompat="@drawable/baseline_navigate_next_24" />
+
+    <SeekBar
+        android:id="@+id/seekBar4"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:max="9"
+        android:progress="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPrev" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
